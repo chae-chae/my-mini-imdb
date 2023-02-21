@@ -10,7 +10,7 @@ function Movie({ id, medium_cover_image, title, rating, genres, summary }) {
       </h2>
       <h4>Rating : {rating}</h4>
       <ul>{genres ? genres.map((g) => <li key={g}>{g}</li>) : null}</ul>
-      <p>{summary}</p>
+      <p>{summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}</p>
       <hr />
     </div>
   );
